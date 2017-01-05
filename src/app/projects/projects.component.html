@@ -1,0 +1,26 @@
+<div class="our-projects">
+  <div class="container">
+      <div class="intro">
+        <h4 class="section-title">أخر مشاريعنا</h4>
+      </div>
+      <div class="outro">
+        <div class="col-lg-3 col-md-6 col-sm-10 offset-sm-1 offset-md-0 col-xs-12" *ngFor="let p of projects">
+            <div class="project">
+                <div class="project-img">
+                  <img src="./assets/images/project{{p.img}}.jpg" alt="Minovate-projects">
+                </div>
+                <div class="project-desc">
+                    <h5> {{p.title}}</h5>
+                    <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                       ما سيلهي القارئ عن التركيز 
+                       على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها
+                    </p>
+                </div>
+            </div>
+            <!-- end project -->
+        </div>
+        <!-- end col-sm-3 -->
+      </div>
+      <!-- end outro -->
+  </div>
+</div>

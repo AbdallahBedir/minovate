@@ -1,0 +1,37 @@
+<div class="our-services">
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="worker-img">
+                    <img src="./assets/images/worker.png" alt="minovate-worker">
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+      <div class="services-content">
+        <div class="container">
+            <div class="intro">
+              <h4 class="section-title">لماذا نحن</h4>
+              <p>نساعدك فى جعل حلم بناء منزلك المستقبلى حقيقة</p>
+            </div>
+            <div class="outro">
+                <div class="col-md-4 col-sm-12" *ngFor="let s of serviceSections">
+                    <div class="service">
+                        <div class="symbol">
+                            <i class="zmdi {{s.symbol}} zmdi-hc-lg"></i>
+                        </div>
+                        <h5>{{s.title}}</h5>
+                        <p>
+                          كان لوريم إيبسوم ولايزال 
+                          المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة 
+                          مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص
+                        </p>
+                    </div>
+                    <!-- end service -->
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end services-content -->
+</div>
+<!-- end our-services -->

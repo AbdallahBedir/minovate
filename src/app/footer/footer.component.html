@@ -1,0 +1,35 @@
+<div class="footer">
+    <div class="container">
+        <div class="mini-footer">
+            <div class="col-md-4 col-sm-6 col-xs-12 who-us">
+              <h5>من نحن</h5>
+              <p>خليل جروب هى شركة رائدة فى هندسة
+                 الانشائات أكثر من ثلاثون عاما نملك بفضل الله الخبره والامانه فى العمل ولدينا
+                  مهندسون متخصصون ذو خبره كبيره بمجال الانشائات والمقاولات والهندسه المعمارية 
+              </p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 khalilGroup">
+              <h5>خليل جروب</h5>
+                <ul class="list-unstyled">
+                  <li *ngFor="let f of khalilList">
+                    <a>{{f}}</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="Address">
+                    <h5>المكتب الرئيسى</h5>
+                    <ul class="list-unstyled">
+                        <li *ngFor="let a of kalilAddress">
+                        <i class="zmdi {{a.symbol}}"></i>
+                        <span>{{a.address}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <span>Copyright @ <a href="http://abdallahbedir.comxa.com/" target="_blank">Abdallah Bedir</a></span>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="sections hidden-sm-down">
+  <div class="container">
+      <div class="intro">
+          <h4 class="section-title">أقسام الشركة</h4>
+          <div class="intro-tabs">
+            <ul class="list-unstyled">
+                <li (click)="whichItemClicked(0)" [class.active]="itemClicked==0">إنشائات</li>
+                <li (click)="whichItemClicked(1)" [class.active]="itemClicked==1">ترميمات</li>
+                <li (click)="whichItemClicked(2)" [class.active]="itemClicked==2" style="border-right: 2px solid #e2e2e2;">التخطيط</li>
+                <li (click)="whichItemClicked(3)" [class.active]="itemClicked==3">الهندسة المعمارية</li>
+            </ul>
+          </div>
+      </div>
+      <div class="outro">
+        <template ngFor [ngForOf]="sectionTitles" let-item let-i="index">
+            <div *ngIf="i==itemClicked"  class="section" [@section]>
+                <h5 >{{item}}</h5>
+                <p>
+                    هناك حقيقة مثبتة {{item}}  منذ
+                    زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز
+                    على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. 
+                    ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ
+                    -إلى حد ما- للأحرف عوضاً عن استخدام
+                    "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف)
+                    وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير
+                    صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص
+                </p>
+            </div>
+        </template>
+      </div>
+  </div>
+  <!-- end container -->
+</div>
+<!-- end sections -->
+
+<!-- start small-sections -->
+<div class="small-sections hidden-md-up">
+    <div class="intro">
+        <h4 class="section-title">أقسام الشركة</h4>
+    </div> 
+    <div class="panels">
+        <div class="panel" *ngFor="let item of sectionTitles;let i=index">
+            <div class="panel-heading" (click)="whichItemClicked(i)">
+                {{item}} <i class="zmdi zmdi-plus" *ngIf="i != itemClicked" [@plusSign]></i>
+            </div>
+            <div class="panel-body" *ngIf="i == itemClicked" [@moveBodyPanel]="">
+                {{item}}
+                هناك حقيقة مثبتة منذ زمن طويل وهي 
+                أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل 
+                الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم 
+                استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+                للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end small-sections -->

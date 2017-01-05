@@ -1,0 +1,21 @@
+<div class="achievments">
+    <div class="container">
+        <div class="intro">
+            <h4 class="section-title">إنجازاتنا</h4>
+            <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ </p>
+        </div>
+        <div class="outro">
+            <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let a of achievments">
+                <div class="achievment">
+                    <h4>
+                      <i class="zmdi zmdi-{{a.symbol}}  zmdi-hc-2x"></i>
+                      <span class="timer" data-from="0" [attr.data-to]="a.stat"></span>
+                    </h4>
+                    <p>{{a.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</div>
+<!-- end achievments -->

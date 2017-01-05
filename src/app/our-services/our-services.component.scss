@@ -1,0 +1,48 @@
+$main-color:#F73F52;
+.our-services{
+    margin:80px 0;
+    text-align:center;
+    .worker-img{
+        img{
+            max-width:100%;
+        }
+    }
+    .services-content{
+        background-color:#DDD;
+        padding:50px 0 40px;
+        margin-top: -65px;
+        @media(max-width:767px){margin-top: -49px;}
+        @media(max-width:460px){margin-top: -40px;}
+        @media(max-width:390px){margin-top: -32px;}
+        @media(max-width:325px){margin-top:-25px;}
+        .intro{
+            p{
+                color:#777676;
+                font-size:15px;
+                @media(max-width:460px){font-size:14px;}
+            }
+        }
+        .outro{
+            padding:30px 0 45px;
+            overflow:hidden;
+            .service{
+                @media(max-width:767px){
+                    margin:10px 0;
+                }
+                background-color:#fff;
+                padding:25px;
+                box-shadow:1px 1px 3px rgba(0,0,0,0.3);
+                .symbol{
+                    i{color:$main-color}
+                }
+                h5{
+                    font-weight:600;
+                    margin-bottom:15px;
+                }
+                p{
+                    font-size:14px;
+                }
+            }
+        }
+    }
+}

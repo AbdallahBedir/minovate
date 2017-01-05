@@ -1,0 +1,112 @@
+$main-color:#F73F52;
+.navbar{
+  position:absolute;
+  z-index:2;
+  width:100%;
+  margin-top:20px;
+  .child-cont{
+    background-color:#fff;  
+    width: 88%;
+    margin: auto;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    .logo{
+      label{  
+        font-size:22px;
+        span{
+          color:$main-color;
+          font-size:17px;
+          font-weight:700
+        }
+      }
+    }
+    ul.nav-links{
+      text-align:center;
+      margin:6px 0;
+      li{
+        display:inline-block;
+        padding:0 10px;
+        font-size:14px;
+      }
+    }
+  }
+
+}
+/*small nav styles */
+.small-nav{
+  position:absolute;
+  width:100%;
+  z-index: 3; 
+  top:0;
+  padding: 5px 0;
+  overflow: hidden;
+  background-color:#fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  .logo{
+    h5{
+      margin-bottom:0;
+      span{
+        color: $main-color;
+        font-size: 17px;
+        font-weight: 600;
+      }
+    }
+  }
+  .links{
+    display:inline-block;
+    cursor: pointer;
+    position: relative;
+    top:2px;
+    width:22px;
+    height:20px;
+    span{
+      display:block;
+      height:2px;
+      position: absolute;
+      margin:4px 0;
+      width:22px;
+      background-color:#7f7e7e;
+      &:nth-child(2){
+        width:15px;
+      }
+    } 
+  }
+}
+/* sidebar styles */
+.sidebar{
+    position: absolute;
+    top: 35px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    padding-top: 15px;
+    height:calc(100% - 35px);
+    width:263px;
+    ul{
+      padding-right:0;
+      & > li{
+        font-size: 14px;
+        padding: 10px 10px 10px 40px;
+        color: #555;
+        cursor: pointer;
+        &:not(.sub):hover{
+          background-color: #f1f1f1;
+        }
+        ul{
+          li{
+            padding:8px;
+            display: block;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: #f9f9f9;
+                margin-right:5px;
+            }
+            i{color:#8d8b8b}
+          }
+        }
+        i{
+            font-size: 13px;
+            padding: 5px 5px; 
+        }
+      }
+    }
+}   

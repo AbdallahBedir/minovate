@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="intro">
+        <h4 class="section-title">أهلا بكم</h4>
+        <p>هل تفكر فى تجديد منزلك؟ تحدث الى أحد خبرائنا الان</p>
+    </div>
+    <div class="outro">
+      <div class="col-xs-12 col-md-10 offset-md-1 offset-lg-0 col-lg-6">
+        <div class="outro-img">
+            <img src="/assets/images/custom-design.jpg" alt="minovate">
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-0">
+        <div class="outro-features">
+          <div class="col-lg-6 col-sm-6 col-xs-12" *ngFor="let section of outroSectios">
+            <div class="feat">
+                <h5><i class="zmdi {{section.symbol}}"></i>{{section.title}}</h5>
+                <p>وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي
+                  (بمعنى أن الغاية هي الشكل وليس المحتوى)
+                  ويُستخدم في صناعات المطابع ودور النشر.
+                </p>
+                <a href="#">إقرأ المزيد</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end outro -->
+  </div>
+  <!-- end container -->
+</div>
+<!-- end wrapper -->

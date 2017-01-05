@@ -1,0 +1,29 @@
+<div class="contactUs">
+    <div class="container">
+            <div class="col-xl-5 col-lg-6 col-md-9 col-sm-10 col-xs-12">
+                <div class="contact-form">
+                    <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+                        <h5>اتصل بنا فى أى وقت</h5>
+                        <div *ngIf="!contactForm.valid && TrySubmite">
+                            <p class="error-message" *ngIf="!contactForm.valid">
+                                *جميع الحقول باللون الأحمر مطلوبه
+                            </p>
+                        </div>
+                        <input type="text" [class.border-red]="TrySubmite && !name.valid" placeholder="الإسم" [formControl]="name" />
+                        <input type="text" [class.border-red]="TrySubmite && !email.valid" placeholder="الإيميل" [formControl]="email">
+                        <input type="text" [class.border-red]="TrySubmite && !phone.valid" placeholder="رقم التليفون" [formControl]="phone">
+                        <textarea placeholder="الرسالة" [formControl]="message"></textarea>
+                        <button>أرسل الرساله</button>
+                        <div *ngIf="contactForm.valid">
+                            <p class="confirm-message" *ngIf="FormSubmitted">
+                                <i class="zmdi zmdi-check-square"></i>
+                                تم إرسال رسالتك بنجاح
+                            </p>
+                        </div>  
+                    </form>
+                </div>
+            </div>  
+    </div>
+    <div id="map"></div>     
+</div>
+

@@ -1,0 +1,86 @@
+$main-color:#F73F52;
+.border-red{border-color:$main-color !important}
+.error-message{color:$main-color;font-size:14px;}
+.ng-invalid.ng-touched{border-color:$main-color !important}
+.confirm-message{color: #6adc6a;
+        font-size: 14px;
+        font-weight: 600;
+        margin: 7px 0;
+        i{padding-left:3px}
+}
+.contactUs{
+    position: relative;
+    background-image:url('./assets/images/map.PNG');
+    overflow:hidden;
+    #map{
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        z-index: 0;
+    }
+    .contact-form{
+        position: relative;
+        z-index: 3;
+        background-color: #fff;
+        padding: 50px 25px;
+        margin: 40px 20px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        @media(max-width:460px){
+            margin:40px 0;
+        }
+        form{
+            h5{
+                font-size: 16px;
+                margin-bottom:22px;
+                position: relative;
+                &:after{
+                    content: "";
+                    display: block;
+                    background-color: #F73F52;
+                    height: 2px;
+                    width: 29px;
+                    position: absolute;
+                    bottom: -10px;
+                }
+            }
+            textarea{height:100px;max-height:120px;}
+            input,textarea{
+                display: block;
+                width: 100%;
+                margin: 15px 0;
+                padding: 9px 10px;
+                border: 1px solid #d6d6d6;
+                outline: none;
+                font-size: 14px;
+                &::-webkit-input-placeholder{
+                    color:#b5b5b5;
+                    opacity:1;
+                }
+            }
+            button{
+                    color: #fff;
+                    background-color: #F73F52;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                    outline: none;
+                    border: 1px solid #F73F52;
+                    padding: 7px 10px;
+                    font-size: 14px;
+                    cursor:pointer; 
+                &:hover{
+                    color:#fff;
+                    background-color:$main-color;
+                }
+            }
+        }
+    }
+}
+@media(max-width:380px){
+    .contactUs .container{
+        padding-right:0;
+        padding-left:0;
+    }        
+}

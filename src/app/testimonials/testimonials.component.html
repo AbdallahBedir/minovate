@@ -1,0 +1,27 @@
+<div class="testimonials">
+    <div class="container">
+        <div class="intro">
+            <h4 class="section-title"> أراء العملاء</h4>
+        </div>
+        <div class="outro">
+            <template class="col-xs-12" ngFor [ngForOf]="TestimonialsPeople" let-t let-i="index">
+              <div class="col-xs-12" *ngIf="t.state=='active'" [@testimon]="t.state">
+                  <div class="testimonial-img">
+                      <img src="./assets/images/{{t.image}}" alt="Minovate">
+                  </div>
+                  <p>
+                    <q>
+                    {{t.text}}
+                    </q>
+                  </p>
+                  <span>{{t.name}}</span>
+              </div>
+            </template>
+            <div class="clearfix"></div>
+            <div class="chevrons">
+                <i class="zmdi zmdi-chevron-right" (click)="chevRightClicked()"></i>
+                <i class="zmdi zmdi-chevron-left" (click)="chevLeftClicked()"></i>
+            </div>
+        </div>
+    </div>
+</div>

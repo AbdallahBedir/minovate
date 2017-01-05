@@ -1,0 +1,38 @@
+<div class="slider" (click)="sliderClicked=false">
+    <app-navbar [sideBarExpanded]="sliderClicked" (sideBarChanged)="sliderClickedHandle($event)"></app-navbar>
+    <div class="owl-carousel owl-theme">
+        <div class="slide first"> 
+            <img src="assets/images/ΚΑΤΟΙΚΙΑ.jpg" alt="Essam khalil">
+            <div class="overlay"></div>
+            <div class="caption">
+              <h1>نحن نشيد المستقبل</h1>
+              <p class="fParagraph">منازل - ابراج - مبانى تعليمية -طرق - كبارى - مدن متكاملة</p>
+              <div class="caption-buttons">
+                  <button>متابعة التفاصيل</button>
+                  <button>تصفح المشاريع</button>
+              </div>
+            </div>
+            <!-- end caption -->
+        </div>
+        <div class="slide">
+          <img src="assets/images/slide-banner2.jpg" alt="Essam khalil">
+          <div class="overlay"></div>
+          <div class="caption">
+              <h1>أكثر من ثلاثون عاما فى مجال الانشاءات</h1>
+              <p>نملك بفضل الله الدقة والمهارة فى العمل</p>
+          </div>
+          <!-- end caption -->
+        </div>
+        <div class="slide">
+          <img src="assets/images/slide-banner3.jpg" alt="Essam khalil">
+          <div class="overlay"></div>
+          <div class="caption">
+              <h1>جاهزون لتنفيذ مشروعك </h1>
+              <p>إتصل بنا الان وحقق حلمك</p>
+          </div>
+          <!-- end caption -->
+        </div>
+    </div>
+    <!-- end owl-carousel -->
+</div>
+<!-- end wrapper -->

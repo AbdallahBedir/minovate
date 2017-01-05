@@ -1,0 +1,95 @@
+<div class="navbar hidden-md-down">
+  <div class="container">
+      <div class="child-cont">
+        <div class="col-sm-3">
+            <div class="logo">
+                <label><span>خليل</span>جروب.</label>
+            </div>
+            <!-- end logo -->
+        </div>
+        <!-- end col-sm-3 -->
+        <div class="col-sm-9">            
+            <ul class="nav-links list-unstyled">
+                <li>الرئيسية</li>
+                <li>عن الشركة</li>
+                <li>
+                    <div class="ui dropdown link">
+                        <div class="head">المشاريع</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item"><a>جسر البسفور</a></div>
+                            <div class="item">نفق اوراسيا</div>
+                            <div class="item">جسر الملك الصالح</div>
+                            <div class="item">مسجد السلطان محمد الفاتح </div>
+                            <div class="item">كوبرى اسطنبول المعلق</div>
+                        </div>
+                    </div>
+                </li>
+                <li>الاخبار</li>
+                <li>الدليل</li>
+                <li>شركات شقيقة</li>
+                <li>اتصل بنا</li>
+            </ul>
+        </div>
+        <!-- end col-sm-9 -->
+        <div class="clearfix"></div>
+      </div>
+      <!-- end child-cont -->
+  </div>
+  <!-- end container -->
+</div>
+<!-- end wrapper -->
+<!-- start small-nav -->
+<div class="small-nav hidden-lg-up" (click)="sideBarExpanded=false">
+    <div class="col-xs-8">
+        <div class="links" (click)="toggleSideBar($event)">
+            <span [@firstSpan]="sideBarExpanded" style="top:0"></span>
+            <span [@middleSpan]="sideBarExpanded" style="top:6px"></span>
+            <span [@lastSpan]="sideBarExpanded" style="top:12px"></span>
+        </div>
+    </div>
+    <div class="col-xs-4">
+        <div class="logo text-xs-left">
+            <h5><span>خليل</span>جروب</h5>
+        </div>
+    </div>
+</div>
+<!-- end small-nav -->
+
+<!-- start sidebar -->
+<div class="sidebar hidden-lg-up" *ngIf="sideBarExpanded" (click)="$event.stopPropagation()" [@sidebar]>
+    <ul class="sidebar-links list-unstyled">
+        <li>الرئيسية</li>
+        <li>عن الشركة</li>
+        <li class="sub" (click)="ToggleSubMenu()">
+            المشاريع <i class="zmdi zmdi-chevron-down" [@rotateChevron]="SubMenuExpanded"></i>
+            <ul  *ngIf="SubMenuExpanded" [@openSubMenu]>
+                <li [@openSubMenu]>
+                    <i class="zmdi zmdi-long-arrow-left"></i>
+                    جسر البسفور                    
+                </li>
+                <li [@openSubMenu]>
+                    <i class="zmdi zmdi-long-arrow-left"></i>
+                    نفق أوراسيا
+                </li>
+                <li [@openSubMenu]>
+                    <i class="zmdi zmdi-long-arrow-left"></i>
+                    جسر الملك الصالح
+                </li>
+                <li [@openSubMenu]>
+                    <i class="zmdi zmdi-long-arrow-left"></i>
+                    مسجد السلطان محمد الفاتح
+                </li>
+                <li [@openSubMenu]>
+                    <i class="zmdi zmdi-long-arrow-left"></i>
+                    كوبرى أسطنبول المعلق
+                </li>   
+            </ul> 
+        </li>
+        <li>الاخبار</li>
+        <li>الدليل</li>
+        <li>شركات شقيقة</li>
+        <li>اتصل بنا</li>
+    </ul>
+</div>
+<!-- end sidebar -->

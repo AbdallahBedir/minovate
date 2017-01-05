@@ -1,0 +1,40 @@
+$main-color:#F73F52;
+.our-projects{
+    text-align:center;
+    background-color:#EEE;
+    margin:70px 0 40px;
+    padding:60px 0 80px;
+    .intro{
+        h4{
+            color:#565656;
+            margin-bottom:20px;
+        }
+    }
+    .outro{
+        padding:40px 0;
+        overflow: hidden;
+        .project{
+            box-shadow:1px 1px 2px rgba(0,0,0,0.2);
+            @media(max-width:991px){
+                margin-bottom:30px;
+            }
+            .project-img{
+                img{width:100%;}
+            }
+            .project-desc{
+                background-color:#fff;
+                padding:20px 10px;
+                h5{
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin-bottom:12px;
+                    color:#545454;
+                }
+                p{
+                    font-size: 14px;
+                    color: #827f7f;
+                }
+            }
+        }
+    }
+}
